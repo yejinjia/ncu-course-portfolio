@@ -1,0 +1,124 @@
+# ============================================================
+#  .gitignore —— "不上传清单"
+#  规则：这里写下的文件/文件夹，Git 会自动忽略，永不提交到 GitHub。
+#  语法：# 是注释；空行无意义；结尾的 / 表示"这是个文件夹"；
+#        * 是通配符（*.log = 所有 .log 结尾的文件）。
+#  需要调整时直接改本文件，随时可以增删。
+# ============================================================
+
+# ---------- 1. 操作系统自动生成的垃圾文件 ----------
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux
+*~
+.directory
+
+# ---------- 2. 编辑器 / IDE 的私有配置 ----------
+# VS Code：忽略个人设置，但保留团队共享的配置
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+
+# JetBrains 系列（PyCharm / IDEA / CLion / GoLand）
+.idea/
+*.iml
+*.iws
+out/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# ---------- 3. Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+ENV/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# ---------- 4. Jupyter Notebook ----------
+.ipynb_checkpoints/
+
+# ---------- 5. C / C++ ----------
+*.o
+*.obj
+*.out
+*.a
+*.lib
+*.pdb
+*.ilk
+*.exp
+cmake-build-*/
+*.exe
+*.dll
+
+# ---------- 6. Java ----------
+*.class
+*.jar
+*.war
+target/
+
+# ---------- 7. Node.js / 前端 ----------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.cache/
+coverage/
+
+# ---------- 8. 编译产物 / 临时文件 ----------
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# ---------- 9. 大文件与实验数据 ----------
+# 数据集体积大、可随时重新下载，传上 GitHub 会让仓库变得又慢又臃肿。
+# 如果某次实验需要提交数据文件，可以临时在本行前加 # 把它注释掉。
+data/
+datasets/
+*.h5
+*.pth
+*.ckpt
+*.zip
+*.7z
+*.rar
+*.xlsx
+
+# ---------- 10. 敏感信息（重要！绝对不要提交）----------
+# 密码、密钥、Token 一旦推上 GitHub，会被爬虫秒抓走，必须换新的。
+.env
+.env.*
+*.pem
+*.key
+secrets.json
+credentials.json
